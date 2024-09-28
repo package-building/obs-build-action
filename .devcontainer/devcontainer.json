@@ -1,0 +1,25 @@
+{
+	"name": "obs-build-action",
+	"image": "ubuntu:noble-20240827.1",
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {}
+	},
+	"onCreateCommand": "sudo ./src/setup.sh && sudo ./test/setup.sh",
+	"runArgs": [
+		"--privileged"
+	],
+	"containerEnv": {
+		"WORKSPACE": "${containerWorkspaceFolder}"
+	},
+	"remoteUser": "ubuntu",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"github.vscode-github-actions",
+				"timonwong.shellcheck",
+				"jetmartin.bats",
+				"ms-python.python"
+			]
+		}
+	}
+}

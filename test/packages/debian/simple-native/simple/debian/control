@@ -1,0 +1,12 @@
+Source: simple
+Section: unknown
+Priority: optional
+Maintainer: Martin Kunkel <41590858+martinkunkel2@users.noreply.github.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.1
+
+Package: simple
+Architecture: any
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Description: an empty package
