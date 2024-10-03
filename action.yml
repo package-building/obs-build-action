@@ -1,7 +1,8 @@
 name: OBS build script
 description: This action builds packages by calling `pbuild` from the [OBS build script](https://github.com/openSUSE/obs-build).
-icon: package
-color: green
+branding:
+  icon: package
+  color: green
 
 inputs:
   path:
