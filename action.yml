@@ -23,7 +23,7 @@ runs:
   steps:
     - shell: bash
       run: |
-        sudo ./src/setup.sh
+        sudo "${GITHUB_ACTION_PATH}/src/setup.sh"
     - shell: bash
       run: |
-        sudo ./src/run.py --vm-type="${{ inputs.vm-type }}" "${{ inputs.path }}"
+        sudo "${GITHUB_ACTION_PATH}/src/run.py" --vm-type="${{ inputs.vm-type }}" "${{ inputs.path }}"

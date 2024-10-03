@@ -16,35 +16,36 @@ At least those base packages are required:
 
 ## Usage
 
-Here's an example of how to use this action in a workflow file:
-
+Here's an example of how to use this action in a workflow file.
+See [obs-build-action-example](https://github.com/package-building/obs-build-action-example) for a full example.
 
 ```yaml
-name: Example Workflow
+name: Example
 
 on:
-  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
 
 jobs:
-  build-package:
+  build:
     name: Build package
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
-      # Change @main to a specific commit SHA or version tag, e.g.:
-      # actions/obs-build-action@e76147da8e5c81eaf017dede5645551d4b94427b
-      # actions/obs-build-action@v1.2.3
-      - name: Build package
-        uses: actions/obs-build-action@main
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: OBS build script
+        uses: package-building/obs-build-action@v0.0.1
         with:
-          path: ./path_to_package_sources
+          path: ./example-package
           vm-type: kvm
           dist: sl15.6
 ```
-
-For example workflow runs, check out the
-[Actions tab](https://github.com/actions/obs-build-action/actions)!
-:rocket:
 
 ## Inputs
 
