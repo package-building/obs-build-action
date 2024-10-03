@@ -1,5 +1,7 @@
 name: OBS build script
-description: Build a package with OBS build script in standalone mode.
+description: This action builds packages by calling `pbuild` from the [OBS build script](https://github.com/openSUSE/obs-build).
+icon: package
+color: green
 
 inputs:
   path:
