@@ -2,7 +2,7 @@
 [![Continuous Integration](https://github.com/package-building/obs-build-action/actions/workflows/ci.yml/badge.svg)](https://github.com/package-building/obs-build-action/actions/workflows/ci.yml)
 [![Lint Codebase](https://github.com/package-building/obs-build-action/actions/workflows/linter.yml/badge.svg)](https://github.com/package-building/obs-build-action/actions/workflows/linter.yml)
 
-This action builds packages with OBS build script in standalone mode.
+This action builds packages by calling `pbuild` from the [OBS build script](https://github.com/openSUSE/obs-build).
 
 ## Runner dependencies
 This action was tested on `ubuntu-24.04` runner, provided by GitHub.
